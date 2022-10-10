@@ -63,49 +63,49 @@
                 <input type="text" step="any" id="fullname" name="fullname" placeholder="Your Full-name" required><br>
 
                 <label for="age" onClick="age()">Age</label><br>
-                <input type="number" step="any" id="age" name="age" placeholder="age in years"><br>
+                <input type="number" step="any" id="age" name="age" placeholder="age in years" required><br>
 
                 <label for="sex" title="displays the gender of the individual either Male or Female" onClick="sex()">Sex</label><br>
-                <input type="number" step="any" id="sex" name="sex" placeholder="1 = male, 0 = female"><br>
+                <input type="number" step="any" id="sex" name="sex" placeholder="1 = male, 0 = female" required><br>
 
                 <label for="cp" title=" displays the type of chest-pain experienced by the individual:0 = typical angina
 1 = atypical angina
 2 = non — anginal pain
-3 = asymptotic" onClick="cp()">Chest pain Type</label><br>
-                <input type="number" step="any" id="cp" name="cp" placeholder="0,1,2,3"><br>
+3 = asymptotic" onClick="cp()" >Chest pain Type</label><br>
+                <input type="number" step="any" id="cp" name="cp" placeholder="0,1,2,3" required><br>
 
                 <label for="trestbps" title="displays the resting blood pressure value of an individual in mmHg (unit)" onClick="trestbps()">Resting Blood Pressure</label><br>
-                <input type="number" step="any" id="trestbps" name="trestbps" placeholder="in mmHg(unit)"><br>
+                <input type="number" step="any" id="trestbps" name="trestbps" placeholder="in mmHg(unit)" required><br>
 
                 <label for="chol" title="displays the serum cholesterol in mg/dl (unit)" onClick="chol()">Serum Cholesterol</label><br>
-                <input type="number" step="any" id="chol" name="chol" placeholder="in mg/dl (unit)"><br>
+                <input type="number" step="any" id="chol" name="chol" placeholder="in mg/dl (unit)" required><br>
 
                 <label for="fbs" title=" compares the fasting blood sugar value of an individual with 120mg/dl.
 If fasting blood sugar > 120mg/dl then : 1 (true) else : 0 (false)" onClick="fbs()">Fasting Blood Sugar</label><br>
-                <input type="number" step="any" id="fbs" name="fbs" placeholder="1 for>120/0 for<120"><br>
+                <input type="number" step="any" id="fbs" name="fbs" placeholder="1 for>120/0 for<120" required><br>
 
                 <label for="restecg"
                     title="displays resting electrocardiographic results 0 = normal 1 = having ST-T wave abnormality 2 = left ventricular hyperthrophy"
                     onClick="restecg()">ECG</label><br>
-                <input type="number" step="any" id="restecg" name="restecg" placeholder="0,1,2"><br>
+                <input type="number" step="any" id="restecg" name="restecg" placeholder="0,1,2" required><br>
 
                 <label for="thalach" onClick="thalach()">Max Heart Rate</label><br>
-                <input type="number" step="any" id="thalach" name="thalach" placeholder="count"><br>
+                <input type="number" step="any" id="thalach" name="thalach" placeholder="count" required><br>
 
                 <label for="exang" title="exercise induced angina" onClick="exang()">Exercise Induced Angina</label><br>
-                <input type="number" step="any" id="exang" name="exang" placeholder="(1 = yes; 0 = no)"><br>
+                <input type="number" step="any" id="exang" name="exang" placeholder="(1 = yes; 0 = no)" required><br>
 
                 <label for="oldpeak" title="ST depression induced by exercise relative to rest: displays the value which is an integer or float" onClick="oldpeak()">Old Peak</label><br>
-                <input type="number" step="any" id="oldpeak" name="oldpeak" placeholder="integer/float(0.-6.5) approx"><br>
+                <input type="number" step="any" id="oldpeak" name="oldpeak" placeholder="integer/float(0.-6.5) approx" required><br>
 
                 <label for="slope" title="the slope of the peak exercise ST segment 0 = upsloping, 1 = flat, 2 = downsloping" onClick="slope()">Slope</label><br>
-                <input type="number" step="any" id="slope" name="slope" placeholder="0,1,2"><br>
+                <input type="number" step="any" id="slope" name="slope" placeholder="0,1,2" required><br>
 
                 <label for="ca"  title="Number of major vessels (0–3) colored by flourosopy " onClick="ca()">CA</label><br>
-                <input type="number" step="any" id="ca" name="ca" placeholder="0,1,2,3"><br>
+                <input type="number" step="any" id="ca" name="ca" placeholder="0,1,2,3" required><br>
 
                 <label for="thal" title="displays the thalassemia ,1 = normal; 2 = fixed defect; 3 = reversable defect" onClick="thal()">Thal</label><br>
-                <input type="number" step="any" id="thal" name="thal" placeholder="1,2,3"><br>
+                <input type="number" step="any" id="thal" name="thal" placeholder="1,2,3" required><br>
 
 
 
@@ -133,28 +133,46 @@ If fasting blood sugar > 120mg/dl then : 1 (true) else : 0 (false)" onClick="fbs
 
                     <table border="2">
                         <tr>
-                            <th>Pregnancies</th>
-                            <th>Glucose</th>
-                            <th>Diastolic</th>
-                            <th>Triceps</th>
+                            <th>age</th>
+                            <th>sex</th>
+                            <th>cp</th>
+                            <th>trestbps</th>
+                            <th>chol</th>
                         </tr>
                         <tr>
-                            <td>{{ pregnancies }}</td>
-                            <td>{{ glucose }}</td>
-                            <td>{{ diastolic }}</td>
-                            <td>{{ triceps }}</td>
-                        </tr>
-                        <tr>
-                            <th>Insulin</th>
-                            <th>Bmi</th>
-                            <th>Dpf</th>
-                            <th>Age</th>
-                        </tr>
-                        <tr>
-                            <td>{{ insulin }}</td>
-                            <td>{{ bmi }}</td>
-                            <td>{{ dpf }}</td>
                             <td>{{ age }}</td>
+                            <td>{{ sex }}</td>
+                            <td>{{ cp }}</td>
+                            <td>{{ trestbps }}</td>
+                            <td>{{ chol }}</td>
+                        </tr>
+                        </table>
+                        <table border="2">
+                        <tr>
+                            <th>fbs</th>
+                            <th>restecg</th>
+                            <th>thalach</th>
+                            <th>exang</th>
+                        </tr>
+                        <tr>
+                            <td>{{ fbs }}</td>
+                            <td>{{ restecg }}</td>
+                            <td>{{ thalach }}</td>
+                            <td>{{ exang }}</td>
+                        </tr>
+                            </table>
+                        <table border="2">
+                        <tr>
+                            <th>oldpeak</th>
+                            <th>slope</th>
+                            <th>ca</th>
+                            <th>thal</th>
+                        </tr>
+                        <tr>
+                            <td>{{ oldpeak }}</td>
+                            <td>{{ slope }}</td>
+                            <td>{{ ca }}</td>
+                            <td>{{ thal }}</td>
                         </tr>
                     </table>
 

@@ -1,7 +1,12 @@
 from flask import Flask,render_template,request,session,redirect
 import mysql.connector
+import numpy as np
+import pickle
+from datetime import datetime
+import pickle
 
 app=Flask(__name__)
+model = pickle.load(open('model.pkl', 'rb'))
 app.secret_key="abz"
 @app.route('/')
 def student():
@@ -100,6 +105,35 @@ def aboutus():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    print("hello")
+
+    fullname=(request.form['fullname'])
+    age = float(request.form['age'])
+    sex = float(request.form['sex'])
+    cp = float(request.form['cp'])
+    trestbps = float(request.form['trestbps'])
+    chol = float(request.form['chol'])
+    fbs = float(request.form['fbs'])
+    restecg = float(request.form['restecg'])
+    thalach = float(request.form['thalach'])
+    exang = float(request.form['exang'])
+    oldpeak = float(request.form['oldpeak'])
+    slope = float(request.form['slope'])
+    ca = float(request.form['ca'])
+    thal = float(request.form['thal'])
+    features=[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
+    final_features = [np.array(features)]
+    prediction = model.predict(final_features)
+    prediction_proba = model.predict_proba(final_features)
+    output = prediction[0]
+    no = prediction_proba[0, 0]
+    yes = prediction_proba[0, 1]
+    neg = f"Negative chances of having diabetes is {'{0:.0%}'.format(no)}"
+    pos = f"Positive chances of having diabetes is {'{0:.0%}'.format(yes)}"
+
+    return render_template('home.html', prediction=output, negative=neg, positive=pos,features=features,
+    fullname=fullname,age=age,sex=sex,cp=cp,trestbps=trestbps,chol=chol,fbs=fbs,restecg=restecg,
+                           thalach=thalach,exang=exang,oldpeak=oldpeak,slope=slope,ca=ca,thal=thal)
+
+
 if __name__ == "__main__":
      app.run(debug=True)
