@@ -47,6 +47,8 @@ if(curl=='http://127.0.0.1:5000/predict'){
     window.onload = function () {
         console.log("loading map");
         loadmap();
+        console.log("generating map")
+        generate();
         }}
 function loadmap(){ 
 var iframe = document.createElement('iframe');
@@ -179,4 +181,37 @@ function thal() {
     document.getElementById("p1").innerHTML="Thalassemia (thal-uh-SEE-me-uh) is an inherited blood disorder that causes your body to have less hemoglobin than normal. Hemoglobin enables red blood cells to carry oxygen. Thalassemia can cause anemia, leaving you fatigued. If you have mild thalassemia, you might not need treatment."
     document.getElementById("p2").innerHTML="Heart failure and arrhythmias are the major cause of death in patients with b-thalassemia."
     document.getElementById("p3").innerHTML="Value 1: normal blood flow, Value 2: fixed defect (no blood flow in some part of the heart), Value 3: reversible defect (a blood flow is observed but it is not normal)"
+}
+
+
+function generate(){
+const element=document.getElementById('button3');
+let btn = document.createElement("button");
+btn.innerHTML = "Generate PDF";
+element.appendChild(btn);
+btn.onclick = function () {
+var opt = {
+  margin:       [0,1.5,0,0],//[top,left,bottom,right]
+//  margin:       [0,0,3,0],//[top,left,bottom,right]
+
+  filename:     'heart.pdf',
+   jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait',page_size:'Letter' }
+//   jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait',page_size:'Letter' }
+//Main margins of the page (left, top, right, bottom) in mm
+//			'A4'=> array(  595.276,   841.890), // = (  210 x 297  ) mm  = (  8.27 x 11.69 ) in
+//   jsPDF:        { unit: 'mm', width:'210',height:'297' }
+// A4 size in pixels at 72 DPI: 595 x 842 pixels. A4 size in pixels at 300 DPI(dots per inch): 2480 x 3508 pixels.
+   };
+alert("Click ok to generate pdf");
+    console.log("generating pdf...")
+    const element1=document.getElementById("tables");
+html2pdf().set(opt).from(element1).save();
+};}
+
+function generatePDF(){
+    console.log("generating pdf...")
+    const element=document.getElementById("tables");
+html2pdf()
+.from(element)
+.save();
 }

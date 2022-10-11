@@ -109,7 +109,7 @@ If fasting blood sugar > 120mg/dl then : 1 (true) else : 0 (false)" onClick="fbs
 
 
 
-                <button class="button" id="btn1" type="submit" >Predict</button>
+                <button class="button" id="btn1" type="submit"  >Predict</button>
                 <!-- <button type="submit" class="btn-close" data-bs-dismiss="alert" aria-label="Close">Predict</button> -->
             </form>
         </div>
@@ -130,8 +130,8 @@ If fasting blood sugar > 120mg/dl then : 1 (true) else : 0 (false)" onClick="fbs
             <button class="button" id="button2"><a id="btn2"
                     href="https://www.google.com/search?q=heart+disease&oq=heart+disease&aqs=chrome..69i57j69i59j0i67j0i67i131i433j0i67i433j69i60j69i61j69i60.5865j0j7&sourceid=chrome&ie=UTF-8"
             target="_blank">Read More</a></button>
-
-                    <table border="2">
+                <div id="tables">
+                    <table  border="2">
                         <tr>
                             <th>age</th>
                             <th>sex</th>
@@ -176,23 +176,10 @@ If fasting blood sugar > 120mg/dl then : 1 (true) else : 0 (false)" onClick="fbs
                         </tr>
                     </table>
 
-                    <!-- <ul id="users" style="    display:flex;flex-direction: row; color: white; font-size: 30px; list-style-type:none; flex-wrap: wrap; align-items: center; justify-content: center;">
+                </div>
+<!--             <button onClick="generatePDF()">download</button>-->
+            <div id="button3"></div>
 
-                            <li>pregnancies: {{ pregnancies }} </li>
-                            <li>glucose: {{ glucose }} </li>
-                            <li>diastolic: {{ diastolic }} </li>
-                            <li>triceps: {{ triceps }} </li>
-                            <li>insulin: {{ insulin }} </li>
-                            <li>bmi: {{ bmi }} </li>
-                            <li>dpf: {{ dpf }} </li>
-                            <li>age: {{ age }} </li>
-                    </ul> -->
-                    <!-- <ul id="users" style="    display:flex;flex-direction: row; color: black; font-size: 20px; list-style-type:none;">
-                        {% for values in features %}
-                          <li>{{ values }}</li>
-                        <li> </li>
-                        {% endfor %}
-                    </ul> -->
         </div>
 
 
@@ -201,7 +188,9 @@ If fasting blood sugar > 120mg/dl then : 1 (true) else : 0 (false)" onClick="fbs
     <footer id="footer">
         | Copyright 2022 learningpath.com | All rights reserved</footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="../static\script\script.js"></script>
+        
 
 </body>
 
