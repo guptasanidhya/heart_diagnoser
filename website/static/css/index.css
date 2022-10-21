@@ -21,7 +21,7 @@ color: white;
     color:white;
     align-items:center;
     margin:5px;
-    font-size: 60px;
+    font-size: 50px;
 
     
 }
@@ -38,7 +38,7 @@ color: white;
   @keyframes imgmovement {
     0%   { left:0px; top:0px;}
   
-    50%  { left:600px; top:0px;}
+    50%  { left:440px; top:0px;}
   
     100% { left:0px; top:0px;}
   }
@@ -46,12 +46,12 @@ color: white;
 
 .form{
     color:white;
-    margin-top:150px;
-    margin-left: 34%;
+    margin-top:178px;
+    margin-left: 35%;
     display: flex;
     flex-direction: column;
     font-size: 30px;
-    width: 32%;  
+    width: 30%;
     align-items: center;
     justify-content: center;
     z-index: 1;
@@ -61,35 +61,36 @@ color: white;
     padding:5px
     
 }
-#form1{
-    background-color: rgba(0,0,0,0);
-}
-#lab_full{
-    background-color: rgba(0,0,0,0);
- }
-.form input{
-    color: white;
-        width:240px;
-        padding:4px;
-        margin:10px;
-        border-radius:5px;
-        border:2px solid #578ad6;
-        font-size:16px;
-        background-color: rgba(0,0,0,0.7);
-        
-    }
 
-    #btn{
+#message{
+color:white;
+font-size:23px;
+background-color:#00000000;
+}
+
+#authentication{
+    background-color: #00000000;
+    color:#578ad6;
+    display:flex;
+    align-items:center;
+ }
+
+
+
+    .btn{
             cursor: pointer;
-            background: rgba(87,138,214,0.8);
-            padding: 10px 16PX;
+            background-color:rgba(0,0,0,0.5);
+            border:2px solid #578ad6;
+            padding: 10px 30PX;
             color: white;
             font-size: 16px;
             font-weight: bold;
             border-radius: 15px;
+            margin:10px;
             margin-top:5px ;
+            /*width:10%;*/
             /* outline: none; */
-            border: none;
+           /* border: none;*/
     }
 
     .images {display: flex;
