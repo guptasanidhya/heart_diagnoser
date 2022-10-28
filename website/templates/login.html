@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="../static\script\script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
-<div id="form-2">
-    <h1>login</h1>
-    <form action="/login" method='post'>
-        Enter Username:<input type="text" name="user"><br>
-        Enter password:<input type="password" name="pass"><br>
-        <input type="submit" value="'signup">
 
-    </form>
-</div>
+<body>
+    <div class="videos">
+        <video autoplay muted loop id="myVideo">
+            <source src="../static\assets\video\movie_login.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <script>
+            var vid = document.getElementById("myVideo");
+            vid.playbackRate = 0.7;
+        </script>
+    </div>
+
+    <div class="container">
+        <div id="links_box">
+            <h1>Things To Learn</h1>
+            <h3>Click on the link to Know More</h3>
+            <ul id="links_data">
+                <li><a href="https://www.google.com/search?q=best+ways+to+keep+your+heart+healthy&sxsrf=ALiCzsae7ZrUzvX5W_dZRO6XX8Mmgu7oZg%3A1666948913988&ei=MZ9bY-TlO4DhseMPh5yUCA&ved=0ahUKEwikwoHPzIL7AhWAcGwGHQcOBQEQ4dUDCA8&uact=5&oq=best+ways+to+keep+your+heart+healthy&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQgAQyBQgAEIYDMgUIABCGAzIFCAAQhgM6CggAEEcQ1gQQsAM6BwgAEIAEEA1KBAhBGABKBAhGGABQ6SZYkDNgmzZoA3ABeACAAcwCiAGIDJIBBzAuNC4yLjGYAQCgAQHIAQjAAQE&sclient=gws-wiz-serp"
+                        target="_blank">What are the best ways to keep your heart healthy ?</a></li>
+                <li><a href="https://www.google.com/search?q=Exercise+that+boost+heart+healthy&sxsrf=ALiCzsZF6zcEMVYVrQuM4Wv-VRMXlO4zyw%3A1666949029121&ei=pZ9bY4HVBs6VseMPh5qNiAM&ved=0ahUKEwjBu_SFzYL7AhXOSmwGHQdNAzEQ4dUDCA8&uact=5&oq=Exercise+that+boost+heart+healthy&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDIFCAAQogQyBwgAEB4QogQ6CggAEEcQ1gQQsAM6BwgjELACECc6BQgAEJECOggIABCxAxCRAjoGCAAQBxAeOgUIABCABDoICAAQCBAHEB46CAgAEAUQBxAeOggIABAIEB4QDToKCAAQCBAeEA0QCjoKCAAQBRAHEB4QCjoECCEQCkoECEEYAEoECEYYAFBoWLhHYLlgaAJwAXgAgAGXA4gB6i-SAQowLjguMTMuMy4xmAEAoAEByAEIwAEB&sclient=gws-wiz-serp"
+                        target="_blank">Which Exercises boosts heart health ?</a></li>
+                <li><a href="https://www.google.com/search?sxsrf=ALiCzsaoYdJ8OJSbxWC9TrK4dLzWVFGlFw:1666949114997&q=foods+that+boost+heart+health&spell=1&sa=X&ved=2ahUKEwiiteiuzYL7AhWXT2wGHUXcC1wQBSgAegQICBAB&biw=1280&bih=577&dpr=1.5"
+                        target="_blank">Which Food items boosts heart health ?</a></li>
+                <li><a href="https://www.google.com/search?q=how+to+remove+stress+from+heart&biw=1280&bih=577&sxsrf=ALiCzsbm1jrGcNTadeqWa-uNHRM-zDJB5w%3A1666949288329&ei=qKBbY8rcE6zjseMPx-KN-A4&oq=how+to+remove+stress+&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgoIABCABBCHAhAUMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgcIIxDqAhAnOgQIIxAnOgQIABBDOgUIABCRAjoHCAAQsQMQQzoHCAAQgAQQCkoECEEYAEoECEYYAFCMBlirImDHLmgCcAF4AIAB_wKIAYgnkgEIMC42LjE1LjGYAQCgAQGwAQrAAQE&sclient=gws-wiz-serp"
+                        target="_blank">How to reduce stress and save your heart?</a></li>
+            </ul>
+        </div>
+        <div id="form-2">
+            <h1>Login Here</h1>
+            <form action="/login" method='post'>
+                <input type="text" name="user" placeholder="Username"><br>
+                <input type="password" name="pass" placeholder="Password"><br>
+                <button class="button" id="btn1" type="submit">Submit</button>
+
+            </form>
+        </div>
 </body>
+
 </html>

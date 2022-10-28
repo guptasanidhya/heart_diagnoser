@@ -1,21 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../static/css/register.css">
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="../static\script\script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
-<div id="form-1">
-    <h1>register System</h1>
-    <form action="/register" method="post">
-        Enter UserName:<input type="text" name="user"><br>
-        Enter Email-Id:<input type="text" name="mail"><br>
-        Enter Phone-Number:<input type="text" name="mob"><br>
-        Enter Password:<input type="password" name="pass"><br>
-        Re-Enter Password:<input type="password" name="rpass"><br>
-        <input type="submit" value="signup">
-        {{msg}}
-    </form>
-</div>
+    <div class="videos">
+        <video autoplay muted loop id="myVideo">
+            <source src="../static\assets\video\movie_register_1.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+        <script>
+            var vid = document.getElementById("myVideo");
+            vid.playbackRate = 0.7;
+        </script>
+    </div>
+
+    <div class="container">
+            <div id="fact_box">
+                <h1>Fun Facts</h1>
+                <div id="fact_data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magni. Lorem, ipsum
+                    dolor sit amet consectetur adipisicing elit. Natus, sapiente.</div>
+            </div>
+
+        <div id="form-1">
+            <h1>Register Here</h1>
+            <form action="/register" method="post" onsubmit="register_msg()">
+                <input type="text" name="user" placeholder="Username" ><br>
+                <input type="text" name="mail" placeholder="Email-Id"><br>
+                <input type="text" name="mob" placeholder="Phone Number" ><br>
+                <input type="password" name="pass" placeholder="Password"><br>
+                <input type="password" name="rpass" placeholder="Confirm Password"><br>
+                <button class="button" id="btn1" type="submit">Submit</button>
+                <div id="msg">{{msg}}</div>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

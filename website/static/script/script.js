@@ -69,8 +69,26 @@ iframe.src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d58886.75471768
 // document.getElementById("introSection").removeChild(btndiv);
 $("#introSection button").remove();
 }
+////////////////////////////////////////////////////////////////////////////////////////
+//end result and map
 
- //
+//register
+
+function register_msg(){
+       console.log("hello ji");
+    }
+
+function fun_fact(){
+    var curl_for_register = window.location.href;
+    console.log(curl_for_register);
+    if(curl_for_register=='http://127.0.0.1:5000/register'){
+    window.onload=function(){
+    console.log("hello ji");
+// var myArray = ["1st person", "2nd person", "3rd person", "4th person", "5th person", "6th person", "7th person", "8th person", "9th person", "10th person"];
+// var fun_fact = document.getElementById("fact_data");
+// fun_fact.innerHTML=myArray[Math.floor(Math.random() * myArray.length)];
+}}}
+//end register
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
