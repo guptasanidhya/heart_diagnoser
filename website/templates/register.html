@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
+<body onload="fun_fact()">
+
     <div class="videos">
         <video autoplay muted loop id="myVideo">
             <source src="../static\assets\video\movie_register_1.mp4" type="video/mp4">
@@ -26,6 +27,14 @@
     <div class="container">
             <div id="fact_box">
                 <h1>Fun Facts</h1>
+                <script>
+                    function fun_fact(){
+                     console.log("hello chutiye") 
+                     var myArray = ["1st person", "2nd person", "3rd person", "4th person", "5th person", "6th person", "7th person", "8th person", "9th person", "10th person"];
+                    var fun_fact = document.getElementById("fact_data");
+                    fun_fact.innerHTML=myArray[Math.floor(Math.random() * myArray.length)];
+                    }
+                 </script>
                 <div id="fact_data">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, magni. Lorem, ipsum
                     dolor sit amet consectetur adipisicing elit. Natus, sapiente.</div>
             </div>
