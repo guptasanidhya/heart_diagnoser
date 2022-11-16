@@ -1,13 +1,16 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+    }
     
     #navbar{
-        padding:5px;
-        background-color:black;
-        position:sticky;
-        top:0;
+    padding:5px;
+    background-color:black;
+    position:sticky;
+    top:0;
+    z-index: 5;
+    display:flex;
     }
     #navbar ul{
         display:flex;
@@ -41,49 +44,84 @@
         /* filter: invert(1); */
         margin-bottom: 4px;
     }
-    #footer{
+
+
+#logout{
+display:flex;
+align-items:center;
+margin-left:600px;
+}
+
+#btn0,#btn1{
+border:3px solid rgb(87,138,214);
+border-radius:25px;
+background-color:rgb(87,138,214);
+padding:8px 15px;
+margin:0px;
+}
+
+.button{
+    cursor: pointer;
+    /* background: #578ad6; */
+    background-color:rgb(87,138,214);
+    /* padding: 10px 16PX; */
+    color: white;
+    /* font-size: 16px; */
+    font-weight: bold;
+    border-radius: 15px;
+    margin-top:5px ;
+    /* outline: none; */
+    border: none;
+}
+.button a{
+color:white;
+text-decoration: none;
+list-style: none;
+}
+
+.container{
+/* display: flex;
+flex-direction: row;
+justify-content: center; */
+background-color: rgb(35,36,39);
+color:white;
+}
+ol li {
+  counter-increment: muffins;
+}
+
+ol li:before {
+  content: counter(muffins) ". ";
+}
+ol {
+  list-style: none;
+  counter-reset: muffins;
+}
+
+h2{
+padding:10px 10px;}
+
+.para {font-size:25px;
+padding:10px 10px;}
+
+.context{
+padding:10px 10px;}
+
+.context p{
+padding:10px 10px;
+font-size:25px;
+}
+
+.attributes{
+padding:10px 10px;
+}
+
+ol li{
+font-size:25px;}
+#footer{
         background-color: black;
         height: 40px;
         color:white;
         text-align:center;
         padding-top:11px;
     }
-    h1{
-        margin: 20px 100px;
-    }
-    h2{
-        margin: 20px 100px;
-    }
-    p{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 24px;
-    margin: 20px 100px;
-    }
-    pre{
-        font-size: 20px;
-        color: black;
-        border: 1px solid white;
-        background-color: #578ad6;
-        text-align: center;
-        padding: 20px 0px;
-    }
-   .container ul{
-        font-size: 24px;
-        margin:20px 100px;
-    }
-
-   .container ul li{
-        list-style-type: square;
-    }
-    
-    .container ol{
-        font-size: 24px;
-        margin:20px 80px;
-    }
-
-.container img{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 30px 300px;
-}
