@@ -203,6 +203,12 @@ function generate(){
 const element=document.getElementById('button3');
 let btn = document.createElement("button");
 btn.innerHTML = "Generate PDF";
+btn.style.color = 'white';
+//btn.background-color='rgba(0,0,0,0.5)';
+btn.style.border = '3px solid rgb(87,138,214)';
+btn.style.backgroundColor='rgb(87,138,214)';
+btn.style.borderRadius='25px';
+btn.style.padding='8px 15px'
 element.appendChild(btn);
 btn.onclick = function () {
 var opt = {
