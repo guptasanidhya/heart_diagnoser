@@ -127,8 +127,8 @@ def predict():
     output = prediction[0]
     no = prediction_proba[0, 0]
     yes = prediction_proba[0, 1]
-    neg = f"Negative chances of having diabetes is {'{0:.0%}'.format(no)}"
-    pos = f"Positive chances of having diabetes is {'{0:.0%}'.format(yes)}"
+    neg = f"Negative chances of having disease is {'{0:.0%}'.format(no)}"
+    pos = f"Positive chances of having disease is {'{0:.0%}'.format(yes)}"
 
     return render_template('home.html', prediction=output, negative=neg, positive=pos,features=features,
     fullname=fullname,age=age,sex=sex,cp=cp,trestbps=trestbps,chol=chol,fbs=fbs,restecg=restecg,
