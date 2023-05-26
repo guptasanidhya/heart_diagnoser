@@ -1,7 +1,6 @@
 from flask import Flask,render_template,request,session,redirect
 import mysql.connector
 import numpy as np
-import pickle
 from datetime import datetime
 import pickle
 
